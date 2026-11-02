@@ -1,0 +1,22 @@
+{
+  "name": "LEEWEAR",
+  "short_name": "LEEWEAR",
+  "description": "Celebrate Christmas and the New Year in LEEWEAR clothing, with festive seasonal offers.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#10070a",
+  "theme_color": "#16070b",
+  "icons": [
+    {
+      "src": "logo-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

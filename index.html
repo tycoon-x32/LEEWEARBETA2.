@@ -1,0 +1,1335 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#16070b">
+    <meta name="description" content="Shop LEEWEAR men's and women's clothing, streetwear, tailored three-piece suits, shoes, pajamas, workout sets and accessories. Explore fashion and beauty tools at LEEWEAR.">
+    <meta name="keywords" content="LEEWEAR clothing, men's clothes, women's clothes, men’s fashion, women’s fashion, streetwear, three-piece suits, pajamas, flared pants sets, workout clothes, hoodies, T-shirts, shoes, watches, glasses, makeup tools, accessories">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="LEEWEAR Men’s & Women’s Fashion, Clothing & Accessories">
+    <meta property="og:description" content="Explore LEEWEAR men’s and women’s clothing, tailored suits, shoes, accessories and more.">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <title>LEEWEAR Men’s &amp; Women’s Clothing, Shoes &amp; Accessories</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.cdnfonts.com/css/palace-script-mt" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/niagara-solid" rel="stylesheet">
+
+    <style>
+        :root {
+            --black: #10070a;
+            --surface: #1b0c11;
+            --orange: #e5bf7d;
+            --red: #861f35;
+            --white: #f5f2ed;
+            --muted: #a7a19a;
+            --line: rgba(255,255,255,.12);
+        }
+
+        * { box-sizing: border-box; }
+
+        html {
+            scroll-behavior: smooth;
+            background: var(--black);
+        }
+
+        body {
+            margin: 0;
+            background: var(--black);
+            color: var(--white);
+            overflow-x: hidden;
+        }
+
+        a, button { -webkit-tap-highlight-color: transparent; }
+
+        a { color: inherit; }
+
+        /* ANNOUNCEMENT */
+
+        .christmas-banner {
+            position: relative;
+            z-index: 20;
+            padding: 11px 15px;
+            background: linear-gradient(90deg, var(--season-deep, #6d1428), var(--season-primary, #a52a3e), var(--season-deep, #6d1428));
+            color: #fff4df;
+            text-align: center;
+            font-size: 9px;
+            font-weight: 900;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        /* NAVIGATION */
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 30;
+            background: rgba(8,8,8,.93) !important;
+            border-bottom: 1px solid rgba(229,191,125,.22);
+            backdrop-filter: blur(18px);
+        }
+
+        .nav-link {
+            color: #f5f2ed !important;
+            transition: color .25s ease;
+        }
+
+        .cart-btn,
+        .mobile-menu-btn,
+        .mobile-link {
+            color: #f5f2ed !important;
+        }
+
+        .mobile-link:hover {
+            color: var(--season-accent, var(--orange)) !important;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--orange) !important;
+        }
+
+        .cart-count {
+            background: var(--orange) !important;
+            color: #080808 !important;
+        }
+
+        .cart-btn:hover,
+        .mobile-menu-btn:hover {
+            color: var(--orange);
+        }
+
+        .mobile-menu {
+            background: #101010 !important;
+        }
+
+        .mobile-link:hover {
+            color: var(--orange);
+        }
+
+        /* HERO */
+
+        .hero {
+            position: relative;
+            isolation: isolate;
+            display: flex;
+            align-items: center;
+            min-height: 85vh;
+            min-height: 85svh;
+            overflow: hidden;
+            background-color: #16090e;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background:
+                radial-gradient(ellipse at 75% 45%,
+                    rgba(229,191,125,.14), transparent 42%),
+                linear-gradient(0deg, #080808, transparent 22%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 1450px;
+            margin: auto;
+            padding: 90px 8% 110px;
+            animation: heroEnter 1s ease both;
+        }
+
+        .eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 25px;
+            color: var(--orange);
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 34px;
+            height: 1px;
+            background: var(--orange);
+        }
+
+        .hero h1,
+        .hero h2 {
+            margin: 0;
+            color: #fff;
+            font-family: Impact, "Arial Narrow", sans-serif;
+            font-size: clamp(65px, 11vw, 150px);
+            font-weight: 900;
+            line-height: .82;
+            letter-spacing: -3px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 span,
+        .hero h2 span {
+            display: block;
+            margin-top: 13px;
+            color: var(--orange);
+            font-family: "Niagara Solid", Impact, sans-serif;
+            font-size: 1.13em;
+            font-weight: 400;
+            letter-spacing: 3px;
+        }
+
+        .hero-description {
+            max-width: 400px;
+            margin: 30px 0;
+            color: #d1cbc4;
+            font-size: 13px;
+            line-height: 2;
+        }
+
+        .hero-buttons {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 22px;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 52px;
+            padding: 0 28px;
+            background: var(--orange) !important;
+            border: 1px solid var(--orange);
+            color: #080808 !important;
+            font-size: 10px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: .3s ease;
+        }
+
+        .btn-primary:hover {
+            background: transparent !important;
+            color: #fff !important;
+            border-color: #fff;
+            transform: translateY(-3px);
+        }
+
+        .hero-caption {
+            color: #ddd5cc;
+            font-size: 9px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hero-coordinates {
+            position: absolute;
+            right: 6%;
+            bottom: 48px;
+            color: rgba(255,255,255,.7);
+            font-size: 9px;
+            letter-spacing: 3px;
+        }
+
+        /* MARQUEE */
+
+        .marquee {
+            overflow: hidden;
+            padding: 18px 0;
+            background: #0d0c0b;
+            border-top: 1px solid #29211b;
+            border-bottom: 1px solid #29211b;
+        }
+
+        .marquee-track {
+            display: flex;
+            width: max-content;
+            animation: marqueeMove 32s linear infinite;
+        }
+
+        .marquee-track span {
+            padding: 0 30px;
+            color: #e2dcd4;
+            white-space: nowrap;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 4px;
+        }
+
+        .marquee-track b {
+            padding-right: 18px;
+            color: var(--orange);
+        }
+
+        /* CATEGORIES */
+
+        .categories-section {
+            padding: 100px 7% !important;
+            background:
+                radial-gradient(ellipse at 50% 0%, #21130c, transparent 60%),
+                var(--black);
+        }
+
+        .section-heading {
+            max-width: 700px;
+            margin: 0 auto 55px;
+            text-align: center;
+        }
+
+        .section-tag {
+            display: block;
+            margin-bottom: 16px;
+            color: var(--orange);
+            font-size: 9px;
+            font-weight: 900;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            margin-top: 0;
+            color: var(--white) !important;
+            font-size: clamp(34px, 5vw, 62px);
+            letter-spacing: -2px;
+            line-height: 1;
+        }
+
+        .section-subtitle {
+            max-width: 460px;
+            margin: 18px auto 0;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.9;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 16px;
+            max-width: 1400px;
+            margin: auto;
+        }
+
+        .category-card {
+            position: relative;
+            isolation: isolate;
+            display: flex;
+            align-items: flex-end;
+            min-height: 400px;
+            padding: 24px;
+            overflow: hidden;
+            background-color: #181513;
+            background-size: cover;
+            background-position: center;
+            border: 1px solid var(--line);
+            text-decoration: none;
+            transition: border-color .35s, transform .35s;
+        }
+
+        .category-card:nth-child(1) {
+            background-image: url("https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=750&q=85");
+        }
+
+        .category-card:nth-child(2) {
+            background-image: url("https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=750&q=85");
+        }
+
+        .category-card:nth-child(3) {
+            background-image: url("https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&w=750&q=85");
+        }
+
+        .category-card:nth-child(4) {
+            background-image: url("https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=750&q=85");
+        }
+
+        .category-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background: linear-gradient(
+                180deg,
+                rgba(0,0,0,.04) 0%,
+                rgba(0,0,0,.2) 40%,
+                rgba(0,0,0,.94) 100%
+            );
+            transition: background .35s;
+        }
+
+        .category-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--orange);
+        }
+
+        .category-card:hover .category-overlay {
+            background: linear-gradient(
+                180deg,
+                rgba(229,191,125,.1),
+                rgba(0,0,0,.3) 35%,
+                rgba(0,0,0,.97)
+            );
+        }
+
+        .category-index {
+            display: block;
+            margin-bottom: 10px;
+            color: var(--orange);
+            font-size: 9px;
+            letter-spacing: 3px;
+        }
+
+        .category-name {
+            margin: 0;
+            color: #fff;
+            font-family: Impact, "Arial Narrow", sans-serif;
+            font-size: clamp(27px, 3vw, 43px);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* BRAND STORY */
+
+        .about-preview {
+            position: relative;
+            padding: 110px 8% !important;
+            background:
+                linear-gradient(90deg, rgba(0,0,0,.94), rgba(0,0,0,.66)),
+                url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1800&q=85")
+                center 35% / cover;
+            border-top: 1px solid #2b211b;
+            border-bottom: 1px solid #2b211b;
+        }
+
+        .about-content {
+            max-width: 750px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about-content .section-title {
+            line-height: 1.08;
+        }
+
+        .about-text {
+            max-width: 520px;
+            margin: 25px auto 32px;
+            color: #c5beb6;
+            font-size: 13px;
+            line-height: 2;
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 48px;
+            padding: 0 25px;
+            border: 1px solid #77716b;
+            color: #fff !important;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: .3s ease;
+        }
+
+        .btn-secondary:hover {
+            color: var(--orange) !important;
+            border-color: var(--orange);
+        }
+
+        /* CLOSING CAMPAIGN */
+
+        .after-dark {
+            position: relative;
+            padding: 95px 7%;
+            overflow: hidden;
+            background:
+                radial-gradient(ellipse at 50% 100%,
+                    rgba(120,28,10,.22), transparent 55%),
+                #0b0b0b;
+            text-align: center;
+        }
+
+        .after-dark h2 {
+            margin: 0;
+            color: #fff;
+            font-family: Impact, "Arial Narrow", sans-serif;
+            font-size: clamp(45px, 8vw, 100px);
+            line-height: .95;
+            text-transform: uppercase;
+        }
+
+        .after-dark h2 span {
+            color: var(--orange);
+        }
+
+        .after-dark p {
+            max-width: 480px;
+            margin: 23px auto 28px;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.9;
+        }
+
+        .after-dark a {
+            color: var(--orange);
+            font-size: 10px;
+            font-weight: 900;
+            letter-spacing: 3px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .after-dark a:hover {
+            color: #fff;
+        }
+
+        /* CART */
+
+        .cart-sidebar {
+            background: #101010 !important;
+            border-left: 1px solid rgba(229,191,125,.3);
+        }
+
+        .cart-title,
+        .total-price {
+            color: var(--orange) !important;
+        }
+
+        .btn-checkout {
+            background: var(--orange) !important;
+            color: #080808 !important;
+        }
+
+        .close-btn:hover {
+            color: var(--orange);
+        }
+
+        /* EMBERS */
+
+        .snow-layer {
+            position: fixed;
+            inset: 0;
+            z-index: 15;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .snowflake {
+            position: absolute;
+            top: -12px;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: #fff7e8;
+            box-shadow: 0 0 12px 3px rgba(255,255,255,.32);
+            opacity: 0;
+            animation: snowFall 12s linear infinite;
+        }
+
+        .snowflake:nth-child(1) { left: 9%; animation-delay: 0s; }
+        .snowflake:nth-child(2) { left: 26%; animation-delay: 4s; }
+        .snowflake:nth-child(3) { left: 43%; animation-delay: 7s; }
+        .snowflake:nth-child(4) { left: 65%; animation-delay: 2s; }
+        .snowflake:nth-child(5) { left: 84%; animation-delay: 5s; }
+        .snowflake:nth-child(6) { left: 96%; animation-delay: 8s; }
+
+        @keyframes snowFall {
+            0% { transform: translateY(0) translateX(0); opacity: 0; }
+            12% { opacity: .75; }
+            85% { opacity: .4; }
+            100% {
+                transform: translateY(105vh) translateX(35px);
+                opacity: 0;
+            }
+        }
+
+        @keyframes marqueeMove {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+
+        @keyframes heroEnter {
+            from { opacity: 0; transform: translateY(22px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 950px) {
+            .categories-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .category-card { min-height: 360px; }
+
+            .hero {
+                background-position: 60% center;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .christmas-banner {
+                font-size: 8px;
+                letter-spacing: 1.5px;
+            }
+
+            .hero {
+                min-height: 76vh;
+                min-height: 76svh;
+                align-items: flex-end;
+            }
+
+            .hero-content {
+                padding: 155px 7% 72px;
+            }
+
+            .hero h1,
+            .hero h2 {
+                font-size: clamp(59px, 15vw, 90px);
+                letter-spacing: -2px;
+            }
+
+            .hero-description {
+                max-width: 320px;
+                font-size: 12px;
+            }
+
+            .hero-buttons {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .hero-coordinates { display: none; }
+
+            .categories-section {
+                padding: 70px 5% !important;
+            }
+
+            .categories-grid { gap: 10px; }
+
+            .category-card {
+                min-height: 260px;
+                padding: 15px;
+            }
+
+            .category-name { font-size: 27px; }
+
+            .about-preview {
+                padding: 80px 7% !important;
+            }
+
+            .after-dark { padding: 70px 5%; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+                scroll-behavior: auto !important;
+                transition-duration: .01ms !important;
+            }
+        }
+
+        /* CHRISTMAS CAMPAIGN */
+        .hero-slide {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            background-size: cover;
+            background-position: center 38%;
+            opacity: 0;
+            visibility: hidden;
+            transform: scale(1.035);
+            transition: opacity 1s ease, transform 7s ease, visibility 1s;
+        }
+
+        .hero-slide.is-active {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
+        }
+
+        .hero-slide:nth-child(1) {
+            background-image:
+                linear-gradient(90deg, rgba(13,3,7,.94), rgba(24,5,10,.66) 43%, rgba(12,4,8,.12)),
+                linear-gradient(0deg, #10070a, transparent 35%),
+                url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=2000&q=85");
+        }
+
+        .hero-slide:nth-child(2) {
+            background-image:
+                linear-gradient(90deg, rgba(13,3,7,.95), rgba(24,5,10,.66) 43%, rgba(12,4,8,.15)),
+                linear-gradient(0deg, #10070a, transparent 35%),
+                url("https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=2000&q=85");
+        }
+
+        .hero-slide:nth-child(3) {
+            background-image:
+                linear-gradient(90deg, rgba(13,3,7,.95), rgba(24,5,10,.68) 43%, rgba(12,4,8,.12)),
+                linear-gradient(0deg, #10070a, transparent 35%),
+                url("https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=2000&q=85");
+        }
+
+        .hero::before {
+            z-index: 1;
+            background:
+                radial-gradient(ellipse at 76% 32%, rgba(229,191,125,.17), transparent 38%),
+                linear-gradient(0deg, #10070a, transparent 22%);
+        }
+
+        .hero .eyebrow,
+        .section-tag,
+        .category-index,
+        .after-dark h2 span,
+        .after-dark a,
+        .cart-title,
+        .total-price {
+            color: var(--orange) !important;
+        }
+
+        .hero h1 span,
+        .hero h2 span { color: var(--season-accent, #e8c783); }
+
+        .hero h1 span[data-seasonal-title],
+        .hero h2 span[data-seasonal-title] {
+            margin-top: 0;
+            color: #fff;
+            font-family: Impact, "Arial Narrow", sans-serif;
+            font-size: 1em;
+            letter-spacing: -3px;
+        }
+
+        .hero h1 span[data-seasonal-accent],
+        .hero h2 span[data-seasonal-accent] {
+            color: var(--season-accent, #e8c783);
+        }
+
+        .hero .btn-primary,
+        .btn-checkout {
+            background: var(--season-accent, #e5bf7d) !important;
+            border-color: var(--season-accent, #e5bf7d);
+            color: #17090d !important;
+        }
+
+        .christmas-banner {
+            text-shadow: 0 1px 8px rgba(0,0,0,.2);
+        }
+
+        .hero-carousel-controls {
+            position: absolute;
+            right: 7%;
+            bottom: 43px;
+            z-index: 4;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .carousel-arrow,
+        .carousel-dot {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            background: rgba(16,7,10,.55);
+            border: 1px solid rgba(255,255,255,.55);
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .carousel-arrow {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            font-size: 19px;
+        }
+
+        .carousel-dot {
+            width: 8px;
+            height: 8px;
+            border: 0;
+            border-radius: 50%;
+            background: rgba(255,255,255,.48);
+        }
+
+        .carousel-dot[aria-current="true"] {
+            background: var(--season-accent, #e5bf7d);
+            box-shadow: 0 0 12px var(--season-accent, rgba(229,191,125,.8));
+        }
+
+        .carousel-arrow:hover,
+        .carousel-arrow:focus-visible,
+        .carousel-dot:focus-visible {
+            outline: 2px solid var(--season-accent, #e5bf7d);
+            outline-offset: 3px;
+        }
+
+        .snowflake {
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .categories-section {
+            background:
+                radial-gradient(ellipse at 50% 0%, #35101b, transparent 62%),
+                var(--black);
+        }
+
+        .category-card:hover {
+            border-color: var(--orange);
+        }
+
+        .about-preview {
+            border-color: rgba(229,191,125,.25);
+        }
+
+        .after-dark {
+            background:
+                radial-gradient(ellipse at 50% 100%, rgba(126,24,49,.38), transparent 58%),
+                #10070a;
+        }
+
+        .coupon-popover {
+            position: fixed;
+            top: 112px;
+            right: 24px;
+            z-index: 45;
+            width: min(320px, calc(100vw - 32px));
+            padding: 17px;
+            background: linear-gradient(145deg, #551324, #210a12 70%);
+            border: 1px solid rgba(229,191,125,.6);
+            box-shadow: 0 18px 55px rgba(0,0,0,.5), 0 0 25px rgba(229,191,125,.12);
+            color: #fff8eb;
+            opacity: 0;
+            transform: translateY(-30px);
+            animation: santaDrop .75s .6s cubic-bezier(.2,.8,.25,1) forwards;
+        }
+
+        .coupon-popover[hidden] { display: none; }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        .coupon-popover-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .santa-intro {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .santa-icon {
+            display: grid;
+            flex: 0 0 44px;
+            width: 44px;
+            height: 44px;
+            place-items: center;
+            border-radius: 50%;
+            background: rgba(255,255,255,.1);
+            font-size: 29px;
+        }
+
+        .coupon-popover h2 {
+            margin: 0;
+            font-size: 14px;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+        }
+
+        .coupon-popover p {
+            margin: 5px 0 12px;
+            color: #e5d4cb;
+            font-size: 11px;
+            line-height: 1.5;
+        }
+
+        .coupon-close {
+            padding: 0 4px;
+            border: 0;
+            background: none;
+            color: #fff;
+            cursor: pointer;
+            font-size: 22px;
+            line-height: 1;
+        }
+
+        .promo-form {
+            display: flex;
+            gap: 7px;
+        }
+
+        .promo-code-input {
+            min-width: 0;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid rgba(255,255,255,.3);
+            border-radius: 0;
+            background: rgba(0,0,0,.28);
+            color: #fff;
+            font: inherit;
+            font-size: 11px;
+            letter-spacing: 1px;
+        }
+
+        .promo-code-input::placeholder { color: #d3b8b2; }
+
+        .promo-submit {
+            flex: 0 0 auto;
+            padding: 0 12px;
+            border: 1px solid var(--season-accent, #e5bf7d);
+            background: var(--season-accent, #e5bf7d);
+            color: #1b090e;
+            cursor: pointer;
+            font-size: 9px;
+            font-weight: 900;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .promo-status {
+            min-height: 16px;
+            margin-top: 8px !important;
+            color: #f0d99e !important;
+            font-size: 10px !important;
+        }
+
+        .cart-promo {
+            margin: 15px 0;
+            padding: 12px;
+            border: 1px solid rgba(229,191,125,.28);
+        }
+
+        .cart-promo label {
+            display: block;
+            margin-bottom: 8px;
+            color: #e5bf7d;
+            font-size: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .cart-item-price {
+            color: #f2d89e !important;
+            font-size: 12px;
+        }
+
+        .price-original {
+            margin-right: 7px;
+            color: #b7aaa4;
+            font-size: .85em;
+            text-decoration: line-through;
+        }
+
+        .product-price .price-original { color: rgba(255,255,255,.7); }
+
+        .price-saving {
+            display: block;
+            margin-top: 2px;
+            color: #f2d89e;
+            font-size: 9px;
+            letter-spacing: .5px;
+        }
+
+        .cart-savings {
+            margin: 8px 0;
+            color: #f2d89e;
+            font-size: 12px;
+        }
+
+        .cart-total {
+            color: var(--white);
+        }
+
+        .cart-total .total-price { font-weight: 800; }
+
+        @keyframes santaDrop {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 560px) {
+            .christmas-banner {
+                padding: 10px 8px;
+                font-size: 8px;
+                letter-spacing: 1px;
+            }
+
+            .hero {
+                min-height: 76vh;
+                min-height: 76svh;
+                align-items: flex-end;
+                background-image: none;
+            }
+
+            .hero-slide {
+                align-items: flex-end;
+                background-position: 58% center;
+            }
+
+            .hero-carousel-controls {
+                right: 7%;
+                bottom: 20px;
+                gap: 9px;
+            }
+
+            .hero-coordinates { display: none; }
+
+            .coupon-popover {
+                top: 118px;
+                right: 12px;
+            }
+        }
+
+        .hero-slide h1,
+        .hero-slide h2 { margin: 0; }
+
+        .hero-slide .hero-content { max-width: 760px; }
+
+        .seasonal-search-copy {
+            max-width: 850px;
+            margin: -22px auto 42px;
+            color: #c9b9b3;
+            text-align: center;
+            font-size: 13px;
+            line-height: 1.9;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .hero-slide { transform: none; transition: none; }
+            .coupon-popover { opacity: 1; transform: none; animation: none; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- CHRISTMAS AND NEW YEAR ANNOUNCEMENT -->
+    <div class="christmas-banner">
+        LEEWEAR SEASONAL COLLECTION &nbsp; / &nbsp; 50% SAVINGS OR 80% OFF WITH SHOPLEEWEAR80
+    </div>
+
+    <!-- GENTLE HOLIDAY SNOW -->
+    <div class="snow-layer" aria-hidden="true">
+        <span class="snowflake"></span>
+        <span class="snowflake"></span>
+        <span class="snowflake"></span>
+        <span class="snowflake"></span>
+        <span class="snowflake"></span>
+        <span class="snowflake"></span>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="LEEWEAR logo" class="logo-img">
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="shop.html" class="nav-link">Shop</a>
+                <a href="shop.html?department=Men" class="nav-link">Men</a>
+                <a href="shop.html?department=Women" class="nav-link">Women</a>
+                <a href="shop.html?department=Accessories" class="nav-link">Accessories</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="cart-btn" onclick="toggleCart()" aria-label="Open shopping cart">
+                    <svg width="24" height="24" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+
+                <button class="mobile-menu-btn"
+                        onclick="toggleMobileMenu()"
+                        aria-label="Toggle mobile menu">
+                    <svg id="menu-icon" width="24" height="24"
+                         viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="shop.html" class="mobile-link">Shop</a>
+            <a href="shop.html?department=Men" class="mobile-link">Men</a>
+            <a href="shop.html?department=Women" class="mobile-link">Women</a>
+            <a href="shop.html?department=Accessories" class="mobile-link">Accessories</a>
+            <a href="about.html" class="mobile-link">About</a>
+            <a href="contact.html" class="mobile-link">Contact</a>
+        </div>
+    </nav>
+
+    <aside class="coupon-popover" id="coupon-popover" aria-label="Santa's Christmas discount">
+        <div class="coupon-popover-header">
+            <div class="santa-intro">
+                <span class="santa-icon" id="seasonal-gift-icon" aria-hidden="true">🎅</span>
+                <div>
+                    <h2 id="seasonal-gift-heading">A seasonal gift: 80% off</h2>
+                    <p id="seasonal-gift-copy">Enter your LEEWEAR code at checkout.</p>
+                </div>
+            </div>
+            <button class="coupon-close" type="button" aria-label="Dismiss Christmas offer" onclick="document.getElementById('coupon-popover').hidden = true">×</button>
+        </div>
+        <form class="promo-form" data-promo-form>
+            <label class="sr-only" for="santa-promo-code">Promo code</label>
+            <input class="promo-code-input" id="santa-promo-code" name="promo" type="text" placeholder="SHOPLEEWEAR80" autocomplete="off" required>
+            <button class="promo-submit" type="submit">Apply</button>
+        </form>
+        <p class="promo-status" data-promo-status aria-live="polite"></p>
+    </aside>
+
+    <!-- HERO CAMPAIGN -->
+    <section class="hero" aria-label="LEEWEAR seasonal collection for men and women">
+        <div class="hero-slide is-active" data-hero-slide aria-hidden="false">
+            <div class="hero-content">
+                <div class="eyebrow" data-seasonal-eyebrow>Find your new-season style</div>
+                <h1><span data-seasonal-title>FIND</span><span data-seasonal-accent>Great Style.</span></h1>
+                <p class="hero-description" data-seasonal-description>
+                    Explore LEEWEAR collections for men and women, including clothing,
+                    tailored suits, shoes, activewear and accessories.
+                </p>
+                <div class="hero-buttons">
+                    <a href="shop.html" class="btn-primary" data-seasonal-cta>Explore the Collection &nbsp; ↗</a>
+                    <span class="hero-caption" data-seasonal-caption>LEEWEAR clothing, designed for every day.</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-slide" data-hero-slide aria-hidden="true">
+            <div class="hero-content">
+                <div class="eyebrow" data-seasonal-eyebrow>Explore more ways to wear LEEWEAR</div>
+                <h2><span data-seasonal-title>MAKE</span><span data-seasonal-accent>It Yours.</span></h2>
+                <p class="hero-description" data-seasonal-description>
+                    Shop men's and women's styles, from everyday essentials to
+                    standout looks for the season.
+                </p>
+                <div class="hero-buttons">
+                    <a href="shop.html?department=Women" class="btn-primary" data-seasonal-cta>Shop Women's Looks &nbsp; ↗</a>
+                    <span class="hero-caption" data-seasonal-caption>Clothing, footwear and accessories in one place.</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-slide" data-hero-slide aria-hidden="true">
+            <div class="hero-content">
+                <div class="eyebrow" data-seasonal-eyebrow>Tailored looks for every occasion</div>
+                <h2><span data-seasonal-title>OWN</span><span data-seasonal-accent>Your Look.</span></h2>
+                <p class="hero-description" data-seasonal-description>
+                    Discover LEEWEAR men's three-piece suits, including styles
+                    priced from KSH 10,000 to KSH 300,000.
+                </p>
+                <div class="hero-buttons">
+                    <a href="shop.html?department=Men&amp;category=3-Piece+Suits" class="btn-primary" data-seasonal-cta>Explore Men's Formalwear &nbsp; ↗</a>
+                    <span class="hero-caption" data-seasonal-caption>Three-piece suits, in Kenyan shillings.</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-coordinates">LEEWEAR / CHRISTMAS &amp; NEW YEAR</div>
+        <div class="hero-carousel-controls" aria-label="Campaign carousel controls">
+            <button class="carousel-arrow" type="button" data-carousel-prev aria-label="Previous campaign slide">‹</button>
+            <button class="carousel-dot" type="button" data-carousel-dot="0" aria-label="Show seasonal collection" aria-current="true"></button>
+            <button class="carousel-dot" type="button" data-carousel-dot="1" aria-label="Show outfit inspiration" aria-current="false"></button>
+            <button class="carousel-dot" type="button" data-carousel-dot="2" aria-label="Show tailored menswear" aria-current="false"></button>
+            <button class="carousel-arrow" type="button" data-carousel-next aria-label="Next campaign slide">›</button>
+        </div>
+    </section>
+
+    <!-- MOVING FESTIVE CAMPAIGN STRIP -->
+    <div class="marquee" id="seasonal-marquee" aria-label="LEEWEAR seasonal collection">
+        <div class="marquee-track" aria-hidden="true">
+            <span><b>✦</b> LEEWEAR STYLE</span>
+            <span><b>✦</b> UP TO 50% OFF</span>
+            <span><b>✦</b> CODE SHOPLEEWEAR80 FOR 80% OFF</span>
+            <span><b>✦</b> FASHION FOR EVERY SEASON</span>
+            <span><b>✦</b> LEEWEAR STYLE</span>
+            <span><b>✦</b> UP TO 50% OFF</span>
+            <span><b>✦</b> CODE SHOPLEEWEAR80 FOR 80% OFF</span>
+            <span><b>✦</b> FASHION FOR EVERY SEASON</span>
+        </div>
+    </div>
+
+    <!-- SHOP BY CATEGORY -->
+    <section class="categories-section">
+        <div class="section-heading">
+            <span class="section-tag" id="seasonal-section-tag">01 / Shop the Collection</span>
+            <h2 class="section-title" id="seasonal-section-title">Fashion for Everyone.</h2>
+            <p class="section-subtitle">
+                Browse men's and women's fashion, shoes and accessories from
+                LEEWEAR, with new styles for every season and occasion.
+            </p>
+        </div>
+
+        <div class="categories-grid">
+            <a href="shop.html?department=Men" class="category-card">
+                <div class="category-overlay"></div>
+                <div>
+                    <span class="category-index">LEEWEAR / MEN</span>
+                    <h3 class="category-name">Men's Wear</h3>
+                </div>
+            </a>
+
+            <a href="shop.html?department=Women" class="category-card">
+                <div class="category-overlay"></div>
+                <div>
+                    <span class="category-index">LEEWEAR / WOMEN</span>
+                    <h3 class="category-name">Women's Wear</h3>
+                </div>
+            </a>
+
+            <a href="shop.html?department=Accessories" class="category-card">
+                <div class="category-overlay"></div>
+                <div>
+                    <span class="category-index">LEEWEAR / DETAILS</span>
+                    <h3 class="category-name">Accessories & Beauty</h3>
+                </div>
+            </a>
+
+            <a href="shop.html?department=Men&amp;category=3-Piece+Suits" class="category-card">
+                <div class="category-overlay"></div>
+                <div>
+                    <span class="category-index">LEEWEAR / FORMAL</span>
+                    <h3 class="category-name">Three-Piece Suits</h3>
+                </div>
+            </a>
+        </div>
+        <p class="seasonal-search-copy">
+            Shop LEEWEAR men's clothing, women's clothing, hoodies, T-shirts,
+            shirts, sweatpants, pajamas, hats, flared two-piece sets, workout
+            clothes, shoes, three-piece suits, glasses, watches, makeup, nail
+            sets, lashes and wigs.
+            LEEWEAR collections bring everyday fashion and occasion wear together.
+        </p>
+    </section>
+
+    <!-- BRAND STORY -->
+    <section class="about-preview">
+        <div class="about-content">
+            <span class="section-tag">02 / The LeeWear Standard</span>
+
+            <h2 class="section-title">
+                Quality You Can Feel.<br>
+                Presence You Can't Ignore.
+            </h2>
+
+            <p class="about-text">
+                At LEEWEAR, find comfortable everyday essentials, workout gear,
+                men's formalwear and women's fashion alongside shoes and accessories.
+                Explore our LEEWEAR collections for every season and occasion.
+            </p>
+
+            <a href="about.html" class="btn-secondary">
+                Discover LeeWear &nbsp; ↗
+            </a>
+        </div>
+    </section>
+
+    <!-- CLOSING CAMPAIGN -->
+    <section class="after-dark">
+        <span class="section-tag" id="seasonal-closing-tag">03 / Make It Yours</span>
+
+        <h2>
+            Your Style.<br>
+            <span>LEEWEAR.</span>
+        </h2>
+
+        <p>
+            Find your next everyday favorite, standout outfit or tailored
+            three-piece suit across the LEEWEAR collection.
+        </p>
+
+        <a href="shop.html">Explore Men's &amp; Women's Fashion &nbsp; ↗</a>
+    </section>
+
+    <!-- SHOPPING CART -->
+    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2 class="cart-title">Shopping Cart</h2>
+
+            <button class="close-btn"
+                    onclick="toggleCart()"
+                    aria-label="Close shopping cart">
+                <svg width="24" height="24" viewBox="0 0 24 24"
+                     fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+
+        <div class="cart-items" id="cart-items">
+            <div class="empty-cart">
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+
+        <div class="cart-footer" id="cart-footer" style="display: none;">
+            <div class="cart-promo">
+                <label for="cart-promo-code">LEEWEAR promo code</label>
+                <form class="promo-form" data-promo-form>
+                    <input class="promo-code-input" id="cart-promo-code" name="promo" type="text" placeholder="SHOPLEEWEAR80" autocomplete="off" required>
+                    <button class="promo-submit" type="submit">Apply</button>
+                </form>
+                <p class="promo-status" data-promo-status aria-live="polite"></p>
+            </div>
+            <p class="cart-savings" id="cart-savings"></p>
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-price" id="total-price">KSH 0</span>
+            </div>
+
+            <button class="btn-checkout" onclick="checkout()">
+                Proceed to Order
+            </button>
+        </div>
+    </div>
+
+    <script src="cart.js"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>
